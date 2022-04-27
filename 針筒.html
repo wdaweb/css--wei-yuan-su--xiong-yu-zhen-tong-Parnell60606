@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>針筒</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 600px;
+            height: 140px;
+            border: 0.5px solid DarkGray;
+            background: linear-gradient(180deg, White, lightgrey 60%, White);
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0px;
+            margin: auto;
+            /* overflow: hidden; */
+            font-size: 20px;
+            font-family: 'Noto Sans TC', sans-serif;
+            color: DarkGray;
+            font-weight: 400;
+            line-height: 245px;
+        }
+
+        /* 內容物  */
+        .container::after {
+            content: '';
+            width: 330px;
+            height: 140px;
+            border-left: 60px solid black;
+            /* background: linear-gradient(180deg, lightyellow, DarkGoldenRod 60%, lightyellow); */
+            background: PapayaWhip;
+            /* ↓色彩增值 */
+            mix-blend-mode: multiply;
+            position: absolute;
+            right: 0;
+        }
+
+        /* 刻度 */
+        .container::before {
+            content: '';
+            width: 100%;
+            height: 13%;
+            position: absolute;
+            background: linear-gradient(90deg, DarkGray 7%, transparent 7%) repeat-x left top/20px;
+            left: 0;
+        }
+
+        .tube {
+            width: 730px;
+            height: 100px;
+            border: 0.5px solid DarkGray;
+            background: linear-gradient(180deg, White, lightgrey 60%, White);
+            position: absolute;
+            left: 0px;
+            right: 0;
+            top: 0;
+            bottom: 0px;
+            margin: auto;
+            color: DarkGray;
+            border-radius: 0 7px 7px 0;
+        }
+
+        /* 按壓頭 */
+        .tube::after {
+            content: '';
+            width: 60px;
+            height: 140px;
+            position: absolute;
+            left: -61px;
+            top: -20px;
+            border: 0.5px solid DarkGray;
+            background: linear-gradient(180deg, White, lightgrey 60%, White);
+            border-radius: 10%;
+        }
+
+        .tube::before {
+            content: '';
+            width: 110px;
+            height: 4px;
+            position: absolute;
+            right: -110px;
+            top: 50px;
+            border: 0.5px solid DarkGray;
+            background: linear-gradient(180deg, White, lightgrey 60%, White);
+            border-radius: 10%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="tube"></div>
+    <div class="container">
+        Made in Taiwan
+    </div>
+
+
+
+</body>
+
+</html>
